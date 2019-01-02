@@ -1,0 +1,19 @@
+$logo-display-size: 80px;
+
+.navigation {
+  width: 100%;
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+
+.navigation__logo {
+  background-image: url("/images/icon.png");
+  background-repeat: no-repeat;
+  background-size: $logo-display-size $logo-display-size;
+  display: inline-block;
+  font-size: 1.5rem;
+  height: $logo-display-size;
+  line-height: $logo-display-size;
+  padding-left: $logo-display-size;
+  vertical-align: middle;
+}

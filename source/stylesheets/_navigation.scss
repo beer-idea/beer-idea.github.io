@@ -1,9 +1,25 @@
 $logo-display-size: 80px;
 
 .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   padding: 0 2rem;
-  margin-top: 1rem;
+  color: white;
+  line-height: $logo-display-size;
+
+  a {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 .navigation__logo {
@@ -13,7 +29,19 @@ $logo-display-size: 80px;
   display: inline-block;
   font-size: 1.5rem;
   height: $logo-display-size;
-  line-height: $logo-display-size;
   padding-left: $logo-display-size;
   vertical-align: middle;
+}
+
+.navigation__menu {
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      padding: 0 1rem;
+    }
+  }
 }

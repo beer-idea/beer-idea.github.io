@@ -1,14 +1,27 @@
 @import "reset";
 @import "navigation";
 
+$color-light: #F9FFFF;
+$color-warn: #F5CA84;
+$color-success: #37868A;
+$color-error: #CF2528;
+$color-dark: #241319;
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
+  font-family: "EB Garamond", serif;
   font-size: 16px;
 }
 
 body {
-  background-color: #F9FFFF;
-  color: #241319;
-  font-family: Helvetica;
+  background-color: $color-light;
+  color: $color-dark;
+  font-size: 1.5rem;
 }
 
 a {
@@ -20,3 +33,100 @@ a {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.3rem; }
+
+body > header {
+  background-color: transparent;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  transition-property: background-color, padding;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.page-header--scrolled {
+  background-color: $color-dark;
+  padding: 0.5rem 0;
+}
+
+.content {
+  padding: 0 10%;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  background: url("/images/background.jpg") no-repeat bottom center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 800px;
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__screenshot {
+  margin-right: 5rem;
+}
+
+.intro__headline {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 1rem;
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+}
+
+.footer {
+  background: $color-dark;
+  color: $color-light;
+  padding: 1rem;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+
+  .navigation__menu {
+    li {
+      display: block;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.footer__copyright {
+  text-align: center;
+}

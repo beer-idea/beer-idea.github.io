@@ -50,4 +50,4 @@ end
 
 set :port, 8080
 set :bind_address, '0.0.0.0'
-set :build_dir, 'docs'
+
